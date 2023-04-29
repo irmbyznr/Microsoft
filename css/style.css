@@ -3,69 +3,409 @@
     padding: 0;
     box-sizing: border-box;
 }
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+html{
+    scroll-behavior: smooth;
 }
-header nav > div:nth-child(2) img{
-    width: 120px;
+/* küçük ekrandaki sağ sol iconlar */
+.navbar .btn-bars{
+    border: none;
+    font-size: 1rem;
+    background: none;
+   
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.navbar > div:nth-child(1){
+    display: flex;
+    gap: 25px;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    align-items: center;
+}
+.navbar > div:nth-child(1) button i{
+    font-size: 1.2rem;
+}
+.navbar > div:nth-child(3){
+    display: flex;
+    gap: 25px;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    align-items: center;
+}
+.navbar > div:nth-child(3) a:nth-child(2) i{
+    font-size: 1.8rem;
+}
+/* iconların bitimi */
+/* collapse navbar */
+.navbar-collapse{
+    margin-top: 15px;
+    background-color: rgb(242,242,242);
+    padding: 15px 0;
+    
+}
+@media screen and (min-width:991px) {
+    .navbar-collapse{
+        height: 0;
+        overflow-y: hidden;
+        background-color: white;
+        margin-top: 0;
+        }
+        .navbar .nav-item{
+            padding: 5px !important ;
+            margin: 0;
+        
+        }
+        .navbar .nav-item a:hover{
+    color: rgb(138,138,138);
+             
+}
+.navbar .nav-item .nav-link{
+    padding-left: 0;
+  
+}
+.last-icons{
+    display: flex;
+}
+
+        
+        
+} 
+
+.navbar .nav-item{
+    padding: 8px 20px;
+    
+}
+.navbar .nav-item a{
+    color: black;
+
+    font-size: 0.9rem;
+}
+.nav-item button{
+    display: inline-block;
+    border: none ;
+    background: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    
+}
+.drpdwn li a{
+    padding: 15px 20px;
+    margin: 0;
+    color: black;
+
+    font-size: 0.9rem;
+    
+}
+.drpdwn{
+    border: none !important;
+    background-color: rgb(242,242,242);
+    
+}
+/* last-icons */
+.drop-togg{
+    font-size: 0.9rem;
+    color: black !important;
+    padding: 0 20px;
+}
+.drop-togg:hover{
+    color: rgb(138,138,138) !important;
+    
+}
+
+.last-icons{
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
 
 }
-header nav a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.554);
+
+.last-icons div:hover{
+    color: rgb(138,138,138) !important;
+    
+}
+@media screen and (max-width:991px){
+    .last-icons{
+        display: none !important;
+    }
+    
+}
+.last-icons > div{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px;
+}
+.last-icons > div a{
+    color: black !important;
+    font-size: 0.9rem;
+}
+.last-icons > div:nth-child(3) i{
+    font-size: 1.8rem;
+    margin-right: 35px;
+}
+.last-icons > div:nth-child(1) i,
+.last-icons > div:nth-child(2) i{
     font-size: 1.1rem;
 }
-header nav img{
-    padding: 12px 4px;
+/* last-icons sonu */
+
+/* tüm microsoft */
+.drop-menu{
+    border:none ;
+    background-color: white ;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    margin-top: 0 !important;
 }
-header nav div:nth-child(1){
+.drop-row{
     display: flex;
-    gap: 10px;
-    margin-left: 15px ;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.drop-row .col-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30px;
+}
+
+.drop-row .col-3 a{
+    font-size: 0.8rem;
+    padding: 5px 0;
+    background: none;
 
 }
-header nav div:nth-child(3){
-    display: flex;
-    gap: 10px;
-    margin-right: 15px ;
+.drop-row .col-3 h6{
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 20px;
+}
+.site-map{
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
-section.main > div img{
+/* bitimi */
+
+
+/* main slider */
+.main{
+    padding: 0;
+    margin-top: 50px;
+}
+section.main .carousel-item img{
     width: 100%;
     height: auto;
 }
-.explanation{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    margin-left: 15px;
+
+
+.carousel-indicators{
+    position: absolute;
+    bottom: -80px;
+    
+}    
+.carousel-indicators [data-bs-target]  {
+    text-indent: 0 !important;
 }
-.explanation div{
-    display: flex;
-    align-items: center;
+.carousel-indicators button:nth-child(1),
+.carousel-indicators button:nth-child(4){
+    font-size: 1.2rem;
+    padding: 20px;
+    position: relative;
+    bottom: 10px ;
+    background: none;
+    
+} 
+
+.carousel-indicators button:nth-child(2),
+.carousel-indicators button:nth-child(3){
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 100%;
+    background-color: black !important;
+    position: relative;
+    bottom: -17px;
+    margin: 0 15px;
+}
+.caption-1,
+.caption-2,
+.carousel-inner .carousel-item .explanation-2,
+
+.carousel-inner .carousel-item .explanation-1{
+   display: flex;
+   flex-direction: column;
+   padding: 20px 0 20px 20px;
+   
+   
+   
+}
+.caption-1 > div,
+.carousel-inner .carousel-item .explanation-1 > div{
+    display: flex; 
     gap: 20px;
-    margin-bottom: 30px;
+    align-items: center;
 }
-.explanation div button{
-    background-color: rgb(32,103,184);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-}
-.explanation div a{
+.caption-1 > div a{
     text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+.carousel-inner .carousel-item .explanation-1 > div a{
+    text-decoration: none;
+    color: rgb(32,103,184) ;
+    font-weight: 500;
+
+}
+.caption-1 > div i,
+.carousel-inner .carousel-item .explanation-1 > div i{
+    padding: 0 10px;
+}
+.caption-1 > div button,
+.carousel-inner .carousel-item .explanation-1 > div button{
+     border: none;
+    background-color:rgb(32,103,184) ;
+    color: white;
+    padding: 10px 15px;
+}
+.caption-2 > div button ,
+.carousel-inner .carousel-item .explanation-2 > div button{
+    border: none;
+    background-color: rgb(32,103,184) ;
+    color: white;
+    padding: 8px 20px;
+}
+@media screen and (max-width:1084px) {
+    .caption-1,
+    .caption-2,
+    .carousel-item > img:nth-child(2){
+        display: none !important;
+    }
     
 }
+
+@media screen and (min-width:1084px){
+   
+    .carousel-inner .carousel-item .explanation-2,
+    .carousel-inner .carousel-item .explanation-1,
+    .carousel-item > img:nth-child(1){
+        display:none;
+    }
+}
+.carousel-inner .caption-1{
+    color: black;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    left: 10%;
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 1.1rem;
+    gap: 10px;
+    
+    
+}
+.carousel-inner .caption-2{
+    color: black;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    top: 55%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    right: 0;
+    left: 60%;
+    font-size: 1.1rem;
+    gap: 10px;
+    
+}
+.second-cont .one-drive h3,
+.carousel-inner .caption-1 h3,
+.carousel-inner .caption-2 h3{
+    font-size: 2rem;
+}
+
+.carousel-inner .carousel-item .card{
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+@media screen and (min-width:760px) {
+    
+    .carousel-inner .carousel-item .card .explanation-2,
+    .carousel-inner .carousel-item .card .explanation-1{
+        transform: translate(5%,-20%);
+        -webkit-transform: translate(5%,-20%);
+        -moz-transform: translate(5%,-20%);
+        -ms-transform: translate(5%,-20%);
+        -o-transform: translate(5%,-20%);
+        max-width: 90%;
+        box-shadow: 0 0 15px rgba(128, 128, 128, 0.308);
+        background-color: white;
+        padding: 50px;
+}
+
+.second-cont .card-body{
+    transform: translate(5%,-20%);
+        -webkit-transform: translate(5%,-20%);
+        -moz-transform: translate(5%,-20%);
+        -ms-transform: translate(5%,-20%);
+        -o-transform: translate(5%,-20%);
+        max-width: 90%;
+        box-shadow: 0 0 15px rgba(128, 128, 128, 0.308);
+        background-color: white;
+        padding: 0 0 50px 30px !important;
+        
+
+}
+    
+}
+.carousel-inner .carousel-item .card .explanation-2{
+    margin-bottom: 28px;
+}
+
+
+
+/* logos */
 .logos{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 90px;
+
+}
+.logos > div a{
+    color: rgb(28,102,184);
 }
 .logos > div:nth-child(1){
     display: flex;
@@ -91,6 +431,227 @@ section.main > div img{
     justify-content: center;
     padding: 0 20px;
     gap: 10px;
+    
+}
+ /* container */
+ .second-cont .card,
+.third-cont .card,
+.first-cont .card{
+    border: none;
+ }
+.second-cont .card-body,
+.third-cont .card-body,
+.first-cont .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center ;
+    padding: 0;
+
+}
+.second-cont .card-body a,
+.third-cont .card-body a,
+.first-cont .card-body a{
+    text-decoration: none;
+    padding: 16px 0;
+    color:#2067b8 ;
+    font-weight: 500;
+    
+}
+.second-cont .card-body i,
+.third-cont .card-body i,
+.first-cont .card-body i{
+padding-left: 5px;
+}
+.third-cont .card-title,
+.first-cont .card-title{
+    padding-top: 16px;
+}
+.second-cont .card-title{
+    padding-top: 50px;
+}
+.second-cont .card-body h5,
+.third-cont .card-body h5,
+.first-cont .card-body h5{
+   font-weight: 600 ;
+}
+.second-cont .card-body h5{
+    font-size: 1.5rem;
+}
+.second-cont button{
+    background-color: rgb(32,103,184);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+   
+}
+.second-cont{
+    margin-bottom: 50px;
+}
+@media screen and (max-width:1084px) {
+    .second-cont .one-drive,
+    .second-cont .card > img:nth-child(2){
+        display: none;
+    }
+}
+@media screen and (min-width:1084px) {
+    .second-cont .card-body,
+    .second-cont .card > img:nth-child(1){
+        display: none;
+    }
+    
+}
+
+.second-cont .one-drive{
+    position: absolute;
+    top: 30%;
+    bottom: 60%;
+    left: 4%;
+    font-size: 1.1rem;
+} 
+.second-cont .one-drive h3{
+    padding: 10px 0;
+}
+.third-cont > h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* last-sec */
+.last-sec{
+    display: flex;
+    gap: 20px;
+}
+.last-sec > div:nth-child(2){
+    display: flex;
+    gap: 20px;
+}
+.last-sec > div:nth-child(2) i{
+    font-size: 1.3rem;
+    color: black;
+}
+
+/* başa dönün bölümü */
+.turn-top{
+    display: flex;
+    flex-direction: row;
+}
+.turn-top a{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin: 0 10px 20px 10px;
+    border-radius: 3px ;
+    -webkit-border-radius: 3px ;
+    -moz-border-radius: 3px ;
+    -ms-border-radius: 3px ;
+    -o-border-radius: 3px ;
+    background-color: rgb(230,230,230);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.turn-top a:hover{
+    background-color: white;
+    box-shadow: 1px 2px 15px rgba(128, 128, 128, 0.305);
+   
+}
+.scroll-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(242, 242, 242, 0.383) ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    
+}
+.scroll-top a{
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+   
+}
+.scroll-top i{
+    padding: 20px;
+}
+
+/* başa dönün bölümünün sonu */
+
+
+/* footer */
+footer{
+    background-color: rgb(242,242,242) ;
+}
+.info{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.info .row > div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.info .row > div a{
+    text-decoration: none;
+    color: rgb(115,115,115);
+    font-size: 0.7rem;
+    line-height: 34px;
+}
+.info .row > div h6{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    color: rgb(97,97,97);
+    font-size: 0.9rem;
+
+}
+
+
+footer > div:nth-child(2) a {
+    color: rgb(97,97,97) ;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+footer > div:nth-child(2) a i{
+    padding-right: 10px;
+    font-size: 1.2rem;
+
+}
+footer > div:nth-child(3) {
+    padding: 20px;
+    text-align: left;
+}
+@media screen and (min-width:900px) {
+    footer > div:nth-child(3){
+        text-align: right;
+    }
+}
+footer > div:nth-child(3) a{
+    color: rgb(97,97,97) ;
+    text-decoration: none;
+    font-size: 0.7rem;
+    padding: 5px;
     
 }
 
