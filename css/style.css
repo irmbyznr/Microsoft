@@ -6,7 +6,7 @@
 html{
     scroll-behavior: smooth;
 }
-/* küçük ekrandaki sağ sol iconlar */
+/* icons(mobile screen) */
 .navbar .btn-bars{
     border: none;
     font-size: 1rem;
@@ -37,7 +37,7 @@ html{
 .navbar > div:nth-child(3) a:nth-child(2) i{
     font-size: 1.8rem;
 }
-/* iconların bitimi */
+/* icons end */
 /* collapse navbar */
 .navbar-collapse{
     margin-top: 15px;
@@ -153,9 +153,9 @@ html{
 .last-icons > div:nth-child(2) i{
     font-size: 1.1rem;
 }
-/* last-icons sonu */
+/* last-icons end */
 
-/* tüm microsoft */
+/* all microsoft */
 .drop-menu{
     border:none ;
     background-color: white ;
@@ -198,8 +198,7 @@ html{
     margin-top: 20px;
 }
 
-/* bitimi */
-
+/* all microsoft end */
 
 /* main slider */
 .main{
@@ -210,8 +209,6 @@ section.main .carousel-item img{
     width: 100%;
     height: auto;
 }
-
-
 .carousel-indicators{
     position: absolute;
     bottom: -80px;
@@ -243,14 +240,11 @@ section.main .carousel-item img{
 .caption-1,
 .caption-2,
 .carousel-inner .carousel-item .explanation-2,
-
 .carousel-inner .carousel-item .explanation-1{
    display: flex;
    flex-direction: column;
    padding: 20px 0 20px 20px;
-   
-   
-   
+
 }
 .caption-1 > div,
 .carousel-inner .carousel-item .explanation-1 > div{
@@ -293,10 +287,12 @@ section.main .carousel-item img{
     .carousel-item > img:nth-child(2){
         display: none !important;
     }
-    
+    .carousel-inner .carousel-item .card{
+        min-height: 250px;
+    }
 }
 
-@media screen and (min-width:1084px){
+@media screen and (min-width:1085px){
    
     .carousel-inner .carousel-item .explanation-2,
     .carousel-inner .carousel-item .explanation-1,
@@ -387,11 +383,6 @@ section.main .carousel-item img{
 }
     
 }
-.carousel-inner .carousel-item .card .explanation-2{
-    margin-bottom: 52px;
-}
-
-
 
 /* logos */
 .logos{
@@ -532,7 +523,7 @@ padding-left: 5px;
     color: black;
 }
 
-/* başa dönün bölümü */
+/* back to top*/
 .turn-top{
     display: flex;
     flex-direction: row;
@@ -586,7 +577,7 @@ padding-left: 5px;
     padding: 20px;
 }
 
-/* başa dönün bölümünün sonu */
+/* back to top end */
 
 
 /* footer */
@@ -654,4 +645,6 @@ footer > div:nth-child(3) a{
     padding: 5px;
     
 }
+
+/* footer end */
 
